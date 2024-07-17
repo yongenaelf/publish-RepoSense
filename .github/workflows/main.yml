@@ -1,9 +1,12 @@
-name: CI
+name: Deploy RepoSense report
 
-on: 
+on:
+# For active deployment on push to main branch
   push:
     branches:
       - master
+  workflow_dispatch:
+
 # For scheduled deployment with Cron Jobs.
 ## Examples of cron schedule expressions:
 ### '0 * * * *': hourly
@@ -15,18 +18,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: pip install requests
-    - name: Generate report
-      run: bash ./run.sh
-    - name: Deploy GitHub pages
-      uses: peaceiris/actions-gh-pages@v3
+    - uses: reposense/reposense-action@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./reposense-report
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        commit_message: Rebuild pages at 
+        token: ${{ secrets.GITHUB_TOKEN }} # Required
+        version: 'release' # Optional | Default: release | Other: master/tag v1.6.1/etc
+        configDirectory: 'configs' # Optional | Default: configs
+        service: 'gh-pages' # Optional | Default: gh-pages | Other: surge
+        domain: '' # Optional (Required if service = surge) | Default: '' | Other: '<subDomain>.surge.sh'
