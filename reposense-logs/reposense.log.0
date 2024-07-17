@@ -1,12 +1,10 @@
-Jul 17, 2024 4:31:47 PM reposense.system.LogsManager addFileHandler
+Jul 17, 2024 4:32:54 PM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Jul 17, 2024 4:31:47 PM reposense.parser.CsvParser validateHeader
+Jul 17, 2024 4:32:54 PM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-Jul 17, 2024 4:31:47 PM reposense.parser.CsvParser validateHeader
+Jul 17, 2024 4:32:54 PM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Jul 17, 2024 4:31:47 PM reposense.model.RepoConfiguration merge
-WARNING: Repository https://github.com/AElfProject/AElf is not found in repo-config.csv.
-Jul 17, 2024 4:31:47 PM reposense.git.GitConfig getGlobalGitLfsConfig
+Jul 17, 2024 4:32:54 PM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -22,23 +20,25 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Jul 17, 2024 4:31:47 PM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Jul 17, 2024 4:31:47 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Jul 17, 2024 4:31:52 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-Jul 17, 2024 4:31:52 PM reposense.report.ReportGenerator analyzeRepos
-INFO: [1/1] Analyzing https://github.com/reposense/RepoSense.git (master)...
-Jul 17, 2024 4:31:53 PM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-Jul 17, 2024 4:31:53 PM reposense.commits.CommitInfoExtractor extractCommitInfos
-INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-Jul 17, 2024 4:31:53 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
-INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-Jul 17, 2024 4:31:53 PM reposense.report.ReportGenerator analyzeRepo
-INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-Jul 17, 2024 4:31:53 PM reposense.report.ReportGenerator generateReposReport
+Jul 17, 2024 4:32:54 PM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/AElfProject/AElf...
+Jul 17, 2024 4:32:54 PM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/AElfProject/AElf to complete...
+Jul 17, 2024 4:33:00 PM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://github.com/AElfProject/AElf completed!
+Jul 17, 2024 4:33:00 PM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/1] Analyzing https://github.com/AElfProject/AElf (dev)...
+Jul 17, 2024 4:33:00 PM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/AElfProject/AElf (dev) does not contain a standalone config file.
+Jul 17, 2024 4:33:00 PM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/AElfProject/AElf (dev)...
+Jul 17, 2024 4:33:03 PM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/AElfProject/AElf (dev)...
+Jul 17, 2024 4:33:03 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/AElfProject/AElf (dev)...
+Jul 17, 2024 4:33:03 PM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/AElfProject/AElf (dev) completed!
+Jul 17, 2024 4:33:03 PM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/publish-RepoSense/publish-RepoSense/reposense-report
-Jul 17, 2024 4:31:53 PM reposense.RepoSense main
-INFO: Elapsed processing time: 6.65 second(s)
+Jul 17, 2024 4:33:03 PM reposense.RepoSense main
+INFO: Elapsed processing time: 9.27 second(s)
