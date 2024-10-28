@@ -1,8 +1,8 @@
-Oct 27, 2024 1:38:08 AM reposense.system.LogsManager addFileHandler
+Oct 28, 2024 1:36:39 AM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Oct 27, 2024 1:38:08 AM reposense.parser.CsvParser validateHeader
+Oct 28, 2024 1:36:39 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-Oct 27, 2024 1:38:08 AM reposense.git.GitConfig getGlobalGitLfsConfig
+Oct 28, 2024 1:36:39 AM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -18,39 +18,39 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Oct 27, 2024 1:38:08 AM reposense.report.RepoCloner spawnCloneProcess
+Oct 28, 2024 1:36:39 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/AElfProject/AElf...
-Oct 27, 2024 1:38:08 AM reposense.report.RepoCloner waitForCloneProcess
+Oct 28, 2024 1:36:39 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/AElfProject/AElf to complete...
-Oct 27, 2024 1:38:13 AM reposense.report.RepoCloner waitForCloneProcess
+Oct 28, 2024 1:36:44 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/AElfProject/AElf completed!
-Oct 27, 2024 1:38:13 AM reposense.report.ReportGenerator analyzeRepos
+Oct 28, 2024 1:36:44 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/1] Analyzing https://github.com/AElfProject/AElf (dev)...
-Oct 27, 2024 1:38:13 AM reposense.report.ReportGenerator updateRepoConfig
+Oct 28, 2024 1:36:44 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: https://github.com/AElfProject/AElf (dev) does not contain a standalone config file.
-Oct 27, 2024 1:38:13 AM reposense.report.ReportGenerator updateAuthorList
+Oct 28, 2024 1:36:44 AM reposense.report.ReportGenerator updateAuthorList
 INFO: https://github.com/AElfProject/AElf (dev) has no authors specified, using all authors by default.
-Oct 27, 2024 1:38:14 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Oct 28, 2024 1:36:45 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias ethiril found. The alias will belong to the last author - ethiril
-Oct 27, 2024 1:38:14 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Oct 28, 2024 1:36:45 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias loning found. The alias will belong to the last author - loning
-Oct 27, 2024 1:38:14 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Oct 28, 2024 1:36:45 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias weili found. The alias will belong to the last author - weili
-Oct 27, 2024 1:38:14 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Oct 28, 2024 1:36:45 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias yanhuaviolet found. The alias will belong to the last author - yanhuaViolet
-Oct 27, 2024 1:38:14 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Oct 28, 2024 1:36:45 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias yiqi found. The alias will belong to the last author - yiqi
-Oct 27, 2024 1:38:14 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Oct 28, 2024 1:36:45 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias yonglin zhu found. The alias will belong to the last author - yonglin zhu
-Oct 27, 2024 1:38:14 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Oct 28, 2024 1:36:45 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/AElfProject/AElf (dev)...
-Oct 27, 2024 1:39:11 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Oct 28, 2024 1:37:43 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/AElfProject/AElf (dev)...
-Oct 27, 2024 1:39:38 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Oct 28, 2024 1:38:10 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/AElfProject/AElf (dev)...
-Oct 27, 2024 1:39:40 AM reposense.report.ReportGenerator analyzeRepo
+Oct 28, 2024 1:38:12 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/AElfProject/AElf (dev) completed!
-Oct 27, 2024 1:39:40 AM reposense.report.ReportGenerator generateReposReport
+Oct 28, 2024 1:38:12 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/publish-RepoSense/publish-RepoSense/reposense-report
-Oct 27, 2024 1:39:40 AM reposense.RepoSense main
-INFO: Elapsed processing time: 1 minute(s) 32.62 second(s)
+Oct 28, 2024 1:38:12 AM reposense.RepoSense main
+INFO: Elapsed processing time: 1 minute(s) 33.47 second(s)
